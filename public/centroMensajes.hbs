@@ -1,0 +1,23 @@
+<div>
+    <h2 class="mail-message">Centro de mensajes</h2></div></br>
+    <h2 class="mail-message">Porcentaje de compresión {{porcentaje}}%</h2>
+    <form onsubmit="return enviarMensaje(this)">
+        
+        <input type="text" id="id" name="id" placeholder="Correo..." /></br></br>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre..." /></br></br>
+        <input type="text" id="apellido" name="apellido" placeholder="Apellido..." /></br></br>
+        <input type="number" id="edad" name="edad" placeholder="Edad" /></br></br>
+        <input type="text" id="alias" name="alias" placeholder="alias" /></br></br>
+        <input type="text" id="avatar" name="avatar" placeholder="avatar" /></br></br>
+        <input type="text" id="mensaje" name="mensaje" placeholder="Ingresá un mensaje..." /></br></br>
+        <input type="submit" class="btn btn-success" value="Enviar!" />
+
+        <hr style="width:50%;text-align:left;margin-left:0">
+        
+        {{#each mensajes}}
+            <p><span class="mail-message">{{this.author.id}}</span> [] : 
+            <span class="text-message">{{this.texto}}</span></p>
+        {{/each}}
+
+    </form>
+</div>

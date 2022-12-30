@@ -1,0 +1,36 @@
+<div id="alert-message" class="alert alert-danger invisible" role="alert"></div>
+
+<div id="success-message" class="alert alert-success relative" role="success"><h2>Bienvenido {{user}}</h2>
+    <button onclick="logout()" class="btn btn-warning absolute-right">Logout</button>
+</div>
+
+<h1 class="mail-message">Ingreso de producto</h1>
+
+<form onsubmit="return agregarProducto(this)" class="padding-10">
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" id="nombre" class="form-control" name="nombre"/><br>
+    </div>
+
+    <div class="mb-3">
+        <label for="precio" class="form-label">Precio</label>
+        <input type="number" id="precio" class="form-control" name="precio"/><br>
+    </div>
+
+    <div class="mb-3">
+        <label for="foto" class="form-label">Foto Url</label>
+        <input type="text" id="foto" class="form-control" name="foto"/><br>
+    </div>
+
+    <input type="submit" class="btn btn-primary" value="Confirmar" />
+
+</form>
+
+<div class="btn-group">
+  <button onclick="listarProductos(1)" class="btn btn-warning">Productos desde BD</button>
+  <button onclick="listarProductos(2)" class="btn btn-warning" style="margin-left:5px;">Productos desde Faker</button>
+</div>
+
+<div id="productos-placeholder"></div>
+<div id="productos-test-placeholder"></div>
+<div id="mensajes-placeholder"></div>
